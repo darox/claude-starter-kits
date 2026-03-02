@@ -6,6 +6,7 @@ Ready-to-use project templates with Claude Code integration — conventions, MCP
 |----------|-------|---------------|
 | [ios-swift](./ios-swift/) | Swift 6.2 · SwiftUI · iOS 26 · Swift Testing | No (requires native Xcode) |
 | [python](./python/) | Python 3.13 · FastAPI · uv · ruff · mypy · pytest | Yes |
+| [nextjs](./nextjs/) | Next.js 16 · React 19 · Tailwind CSS 4 · TypeScript · Vitest · Playwright | Yes |
 
 ## Getting Started
 

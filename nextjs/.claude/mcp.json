@@ -1,0 +1,50 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      },
+      "description": "GitHub API \u2014 PRs, issues, branches"
+    },
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "${CONTEXT7_API_KEY}"
+      },
+      "description": "Up-to-date library docs injected into context. Add 'use context7' to any prompt, or 'use library /org/repo' for a specific lib."
+    },
+    "next-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "next-devtools-mcp@latest"
+      ],
+      "description": "Official Vercel Next.js MCP \u2014 runtime errors, dev server logs, page metadata, routes, Server Actions. IMPORTANT: call the 'init' tool at the start of every session."
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ],
+      "description": "Official shadcn/ui MCP \u2014 browse, search, and install components from the shadcn registry or any configured registry in components.json. Use natural language: 'Add a login form using shadcn components'."
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "description": "Official Microsoft Playwright MCP \u2014 browser automation, E2E testing, accessibility inspection. Use to visually verify UI after changes, write and run E2E tests, and debug layout/interaction issues."
+    }
+  }
+}
