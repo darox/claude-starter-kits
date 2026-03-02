@@ -1,48 +1,16 @@
-# ios-swift
+# Claude Starter Kits
 
-iOS 26 SwiftUI starter with Claude Code integration.
+Ready-to-use project templates with Claude Code integration — conventions, MCP servers, skills, and CI pre-configured.
 
-**Stack:** Swift 6.2 · SwiftUI · iOS 26 · Swift Testing · MVVM · `@Observable`
+| Template | Stack | Dev Container |
+|----------|-------|---------------|
+| [ios-swift](./ios-swift/) | Swift 6.2 · SwiftUI · iOS 26 · Swift Testing | No (requires native Xcode) |
+| [python](./python/) | Python 3.13 · FastAPI · uv · ruff · mypy · pytest | Yes |
 
-## Setup
+## Getting Started
 
-> **No dev container** — iOS development requires Xcode running natively on macOS. Containerised builds cannot access the iOS Simulator or the required Apple toolchain.
+1. Copy a template folder into your new project
+2. Follow the `README.md` inside the template
+3. Open in Claude Code — MCP servers and skills auto-configure
 
-1. Install XcodeGen if you don't have it: `brew install xcodegen`
-2. Generate the Xcode project: `xcodegen generate`
-3. Open `StarterApp.xcodeproj` in Xcode
-4. Select an iOS simulator (e.g. iPhone 16 Pro)
-5. Build & run (⌘R)
-
-### iOS Simulator MCP (required for Claude Code)
-
-```bash
-brew tap facebook/fb
-brew install idb-companion
-```
-
-## Claude Code
-
-Open this folder in Claude Code. MCP servers are pre-configured in `.claude/mcp.json`.
-
-Install the recommended skills once:
-```
-/plugin marketplace add AvdLee/SwiftUI-Agent-Skill
-```
-
-(Or it auto-installs via `.claude/settings.json`)
-
-See `CLAUDE.md` for conventions and workflow.
-
-## Commands
-
-```bash
-# Generate Xcode project
-xcodegen generate
-
-# Build
-xcodebuild build -project StarterApp.xcodeproj -scheme StarterApp -destination "platform=iOS Simulator,name=iPhone 16 Pro"
-
-# Test
-xcodebuild test -project StarterApp.xcodeproj -scheme StarterAppTests -destination "platform=iOS Simulator,name=iPhone 16 Pro"
-```
+Each template includes a `CLAUDE.md` with conventions, workflow orchestration, and guardrails.

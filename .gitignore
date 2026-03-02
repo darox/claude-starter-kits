@@ -1,8 +1,6 @@
-.build/
-.swiftpm/
-*.xcodeproj/
-*.xcworkspace/
-DerivedData/
-tmp/*
-!tmp/.gitkeep
+# macOS
 .DS_Store
+
+# IDE
+.idea/
+*.swp
