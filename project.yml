@@ -1,0 +1,50 @@
+name: StarterApp
+
+options:
+  bundleIdPrefix: com.example
+  deploymentTarget:
+    iOS: "26.0"
+  xcodeVersion: "26.2"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+
+settings:
+  base:
+    SWIFT_VERSION: "6.2"
+    GENERATE_INFOPLIST_FILE: true
+    SWIFT_STRICT_CONCURRENCY: complete
+
+# packages:
+#   MyPackage:
+#     url: https://github.com/org/repo
+#     from: "1.0.0"
+
+targets:
+  StarterApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: StarterApp/Sources
+    resources:
+      - path: StarterApp/Resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.StarterApp
+        INFOPLIST_KEY_UILaunchScreen_Generation: true
+        INFOPLIST_KEY_CFBundleDisplayName: Starter App
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_STYLE: Automatic
+    # dependencies:
+    #   - package: MyPackage
+
+  StarterAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: StarterApp/Tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.StarterAppTests
+    dependencies:
+      - target: StarterApp
